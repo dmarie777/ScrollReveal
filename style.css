@@ -53,11 +53,12 @@ main, section    {
 }
 
 #progress {
-    position: absolute;
+    /* position: absolute; */
     inset: 0;
     height: 10px;
     width: 100vw;
     background-color: red;
+    position:fixed;
 }
 
 /* adding animations */
@@ -71,11 +72,15 @@ main, section    {
     }
 }
 
-#progress {
+/* #progress {
     animation: grow-progress 2s linear forwards;
     transform-origin: left;
+} */
+
+#progress {
+    animation: grow-progress linear forwards;
+    transform-origin: left;
+    animation-timeline: scroll();
 }
-
-
 
 

@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    overflow-x: hidden;
+}
 
 header {
     min-height: 40px;
@@ -22,7 +25,6 @@ a {
 main, section {
     padding: 0 20px;
     min-height: 100ch;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.352) 0%, rgb(14, 15, 18) );
     min-height: 93vh;
 
 }
@@ -49,6 +51,31 @@ main, section    {
 .content {
     width: 400px;
 }
+
+#progress {
+    position: absolute;
+    inset: 0;
+    height: 10px;
+    width: 100vw;
+    background-color: red;
+}
+
+/* adding animations */
+@keyframes grow-progress {
+    from {
+        transform: scaleX(0);
+        left: 0;
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#progress {
+    animation: grow-progress 2s linear forwards;
+    transform-origin: left;
+}
+
 
 
 

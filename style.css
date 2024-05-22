@@ -62,24 +62,24 @@ main, section    {
 }
 
 /* adding animations */
-@keyframes grow-progress {
+/* @keyframes grow-progress {
     from {
         transform: scaleX(0);
     }
     to {
         transform: scaleX(1);
     }
-}
+} */
 
 /* #progress {
     animation: grow-progress 2s linear forwards;
     transform-origin: left;
 } */
 
-#progress {
+/* #progress {
     animation: grow-progress linear forwards;
     transform-origin: left;
     animation-timeline: scroll();
-}
+} */
 
 

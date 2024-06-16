@@ -62,24 +62,40 @@ main, section    {
 }
 
 /* adding animations */
-/* @keyframes grow-progress {
+@keyframes grow-progress {
     from {
         transform: scaleX(0);
     }
     to {
         transform: scaleX(1);
     }
-} */
+} 
+
+#progress {
+    animation: grow-progress linear forwards;
+    transform-origin: left;
+    animation-timeline: scroll();
+}
 
 /* #progress {
     animation: grow-progress 2s linear forwards;
     transform-origin: left;
 } */
 
-/* #progress {
-    animation: grow-progress linear forwards;
-    transform-origin: left;
-    animation-timeline: scroll();
-} */
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+    50% {
+        opacity: 1;
+        clip-path: inset(0);
+    }
+}
+
+.container-box {
+    animation: reveal linear forwards;
+    animation-timeline: view();
+}
 
 

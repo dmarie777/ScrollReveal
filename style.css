@@ -101,3 +101,17 @@ main, section    {
 }
 
 
+
+ul {
+    max-height: 80vh;
+    min-width: 40vw;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+li {
+    min-height: 70px;
+    list-style: none;
+    border: 0.1px solid grey;
+    line-height: 70px;
+}

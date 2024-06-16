@@ -59,6 +59,7 @@ main, section    {
     width: 100vw;
     background-color: red;
     position:fixed;
+    z-index: 2;
 }
 
 /* adding animations */

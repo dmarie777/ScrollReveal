@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --duration: 10s;
+    --items: 2;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -14,7 +20,6 @@ header {
     padding: 0 20px;
     background: rgba(253, 252, 252, 0.441);
     align-items: center;
-
 }
 
 a {
@@ -31,8 +36,9 @@ main, section {
 
 main, section    {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center
 }
 
 .container-box{
@@ -60,6 +66,47 @@ main, section    {
     background-color: red;
     position:fixed;
     z-index: 2;
+}
+
+.title-container {
+    position: relative;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    font-size: 2.5rem;
+}
+
+.textWrapper, h1 {
+    height: 100vh;
+    line-height: 100vh;
+    width: 100%;
+}
+
+.shadowText {
+    position: absolute;
+    height: 100%;
+    width: max-content;
+    left: 100%;
+    overflow: none;
+    color: rgba(125, 125, 134, 0.76);
+    font-size: 5rem;
+    animation: infiniteScroll linear var(--duration) infinite;
+}
+
+.text1 {
+    animation-delay: calc(var(--duration) / var(--items) * (var(--items) - 1) * -1);
+}
+.text2 {
+    animation-delay: calc(var(--duration) / var(--items) * (var(--items) - 2) * -1);
+}
+
+@keyframes infiniteScroll {
+     to {
+        left: -100%;
+     }
 }
 
 /* adding animations */
@@ -146,6 +193,5 @@ li {
     100% {
         opacity: 1;
         transform: translateY(0);
-
     }
 }

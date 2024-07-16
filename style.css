@@ -14,12 +14,53 @@ body {
 }
 
 header {
-    min-height: 40px;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
     background: rgba(253, 252, 252, 0.441);
     align-items: center;
+    animation: reduceHeader 3s forwards;
+}
+@keyframes reduceHeader {
+    
+    to {
+        height: 40px;
+    }
+
+}
+
+.about {
+    position:absolute;
+    padding: 20px;
+    right: 100%;
+    opacity: 0%;
+    animation: animateAbout 3s 2s forwards ease-out;
+}
+@keyframes animateAbout {
+    to {
+        right: 0%;
+        opacity: 100%;
+    }
+}
+
+.mainLogo {
+    position:absolute;
+    padding: 20px;
+    left: 50%;
+    font-size: 4rem;
+    width: 100vw;
+    animation: animateLogo 3s forwards;
+}
+
+@keyframes animateLogo {
+    to{
+        position:absolute;
+        left: 0%;
+        text-align: center;
+        font-size: 2rem;
+        width: auto; 
+    }
 }
 
 a {

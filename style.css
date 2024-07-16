@@ -10,6 +10,7 @@
 }
 
 body {
+    font-family: "Anton SC", sans-serif;
     overflow-x: hidden;
 }
 
@@ -33,13 +34,12 @@ header {
 .about {
     position:absolute;
     padding: 20px;
-    right: 100%;
+    right: 0%;
     opacity: 0%;
     animation: animateAbout 3s 2s forwards ease-out;
 }
 @keyframes animateAbout {
     to {
-        right: 0%;
         opacity: 100%;
     }
 }
@@ -131,8 +131,11 @@ h1 {
     height: 100%;
     width: max-content;
     left: 100%;
+    top: 10%;
     overflow: none;
-    color: rgba(125, 125, 134, 0.76);
+    /* color: rgba(125, 125, 134, 0.76); */
+    color:transparent;
+    -webkit-text-stroke: 1px rgba(125, 125, 134, 0.76);
     font-size: 5rem;
     animation: infiniteScroll linear var(--duration) infinite;
 }
